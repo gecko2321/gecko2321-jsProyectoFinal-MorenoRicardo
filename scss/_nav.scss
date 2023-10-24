@@ -1,0 +1,11 @@
+.navbar {
+  background-color: $colorfondo;
+  a {
+    font-family: $navFontFamly;
+    font-size: $navFontSize;
+    color: $navColor;
+    &:hover {
+      color: #414042;
+    }
+  }
+}

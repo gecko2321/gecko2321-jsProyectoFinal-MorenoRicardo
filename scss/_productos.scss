@@ -1,0 +1,45 @@
+.productos {
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  figure {
+    width: 30%;
+    border: solid 1px pink;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    figcaption {
+      color: $figCaptionColor;
+      font-size: 1.4em;
+    }
+    p {
+      text-align: center;
+    }
+    button {
+      border: none;
+      background-color: $navColor;
+      padding: 3px;
+      color: white;
+      border-radius: 4px;
+      margin: 10px 0;
+      &:hover {
+        cursor: pointer;
+        background-color: $navColor;
+      }
+    }
+  }
+}
+
+.btn-animado {
+  background-image: linear-gradient(to right, #2bb673, #cfcc2a);
+  background-size: 200% 100%;
+  transition: background-position 0.5s;
+  &:hover {
+    background-position: 100% 0;
+  }
+}

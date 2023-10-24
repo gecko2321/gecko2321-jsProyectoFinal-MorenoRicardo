@@ -1,0 +1,17 @@
+{
+  "name": "PreEntrega1-MorenoRicardo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass",
+    "sass:watch": "sass --watch scss/style.scss  css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.67.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
