@@ -168,3 +168,15 @@ body {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.login{ 
+flex-direction: column;
+text-align: left;
+}
+
+.buscar{ 
+  flex-direction: column;
+  text-align: left;
+  
+  }

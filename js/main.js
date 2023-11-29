@@ -1,15 +1,15 @@
 //alert()
 
-let user;
-let pass;
+// let user;
+// let pass;
 
 //usuario = prompt ('Ingrese su Usuario')
 
 //creo funcion para solicitar usuario guardarlo en variable y mostrarlo en alerta
-function usuario() {
-  user = prompt("Ingresar Usuario");
-  alert("El usuario ingresado es " + user); //muestro el usuario
-}
+// function usuario() {
+//   user = prompt("Ingresar Usuario");
+//   alert("El usuario ingresado es " + user); //muestro el usuario
+// }
 
 // //Funcion para buscar el precio del producto (entre 3 productos)
 // function buscarp(letra) {
@@ -35,24 +35,24 @@ function usuario() {
 // }
 
 //llamo a la funcion usuario
-usuario();
+// usuario();
 
-let i = 1;
-if (user !== "richard") {
-  //Si el usuario no es richard salgo con error
-  alert("El Usuario Ingresado no Existe");
-} else
-  while (i <= 3) {
-    pass = prompt("Ingrese su Password"); //Si el usuario es richard pido password
-    if (pass === "valido") {
-      //si es valido ingreso al sistema
-      console.log("Ha ingresado correctamente al sistema");
-      break;
-    } else {
-      alert("INCORRECTO, quedan" + " " + (3 - i) + " " + "Intentos"); //si es invalido x 3 veces salgo
-      i = i + 1;
-    }
-  }
+// let i = 1;
+// if (user !== "richard") {
+//   //Si el usuario no es richard salgo con error
+//   alert("El Usuario Ingresado no Existe");
+// } else
+//   while (i <= 3) {
+//     pass = prompt("Ingrese su Password"); //Si el usuario es richard pido password
+//     if (pass === "valido") {
+//       //si es valido ingreso al sistema
+//       console.log("Ha ingresado correctamente al sistema");
+//       break;
+//     } else {
+//       alert("INCORRECTO, quedan" + " " + (3 - i) + " " + "Intentos"); //si es invalido x 3 veces salgo
+//       i = i + 1;
+//     }
+//   }
 
 //Ingreso al sistema
 
@@ -66,6 +66,57 @@ if (user !== "richard") {
 
 // //muestro el total de ambos items
 // console.log("El monto del carrito es " + sumar(item1, item2));
+
+let loginBtn = document.getElementById("loginPrd");
+let buscarBtn = document.getElementById("buscarBtn");
+let txtUsu = document.getElementById("txtUsu");
+let txtPass = document.getElementById("txtPass");
+//solicito Nombre de producto y precio
+let nombre = document.getElementById("txtProd");
+//let precio = document.getElementById("txtPrecio").value;
+
+let busqueda = document.querySelector(".buscar");
+busqueda.style.visibility = "hidden"; //oculto el cuadro de busqueda
+
+
+let botones = document.querySelectorAll(".btn-animado")
+
+//genero localstorage segun boton apretado
+let botonApretado = e => { 
+ let idboton = e.target.id.replace("b", "")
+  localStorage.setItem("codigoProd",idboton)
+  console.log(idboton)
+}
+
+//recorro botones de carrito
+for (let boton of botones) {
+  boton.addEventListener("click", botonApretado);
+}
+
+//variable para conteo de logins
+let i = 3;
+
+function login() {
+  if (txtUsu.value !== "richard") {
+    //Si el usuario no es richard salgo con error
+    alert("El Usuario Ingresado no Existe");
+  } else if (txtPass.value === "valido") {
+    //si es valido ingreso al sistema
+    console.log("Ha ingresado correctamente al sistema");
+    busqueda.style.visibility = "visible"; //muestro el cuadro de busqueda si el logueo es correcto
+  } else {
+    i = i - 1;
+    alert("INCORRECTO, quedan" + " " + i + " " + "Intentos");
+  }
+
+  txtUsu.value = ""; //borro valor de input
+  txtPass.value = ""; //borro valor de input
+  if (i < 1) {
+    loginBtn.disabled = true;
+  } //deshabilito boton despues de 3 intentos fallidos
+}
+
+loginBtn.addEventListener("click", login);
 
 //Creo array de productos que se corresponden a los productos publicados en la pagina
 const productos = [
@@ -136,35 +187,25 @@ function mostrarProductos(productos) {
 
 //funcion para filtrado segun input
 function filtrarProductos() {
-  const resultado = productos
-  .filter(filtrarNombre)
-  .filter(filtrarPrecio);
+  const resultado = productos.filter(filtrarNombre);
+
   if (resultado.length > 0) {
     mostrarProductos(resultado);
   } else {
     alert("No hay coincidencia");
+    txtProd.value = ""; //borro valor de input
   }
 }
 
 //funcion filtro por nombre
 function filtrarNombre(producto) {
-  if (nombre) {
-    return producto.nombre === nombre;
+  if (nombre.value) {
+    return producto.nombre === nombre.value;
   }
   return producto;
 }
 
-//funcion filtro por precio
-function filtrarPrecio(producto) {
-  if (precio) {
-    return producto.precio === precio;
-  }
-  return producto;
-}
 
-//solicito Nombre de producto y precio
-let nombre = prompt("Ingresar Producto a buscar");
-let precio = Number(prompt("Ingresar precio de preferencia"));
 
 //ejecuto funcion
-filtrarProductos();
+buscarBtn.addEventListener("click", filtrarProductos);

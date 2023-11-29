@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="../css/animate.css" />
     <!-- Icono en la pestaña -->
     <link rel="shortcut icon" href="../img/favicon.webp" type="image/x-icon" />
+     <!-- js propio -->
+     <script src="../js/main.js" defer></script>
   </head>
 
   <body>
@@ -94,6 +96,28 @@
     </div>
 
     <!-- CUERPO -->
+<div>
+    <div class="login">
+      <p>Usuario</p>
+      <input type="text" name="Usuario" id="txtUsu" />
+      <p>Password</p>
+      <input type="text" name="Password" id="txtPass" />
+      <br>
+      <br>
+      <button id="loginPrd">LOGIN</button>
+    </div>
+<br>
+<br>
+  <div class="buscar">
+    <p>Producto</p>
+      <input type="text" name="Producto" id="txtProd" />
+      <br>
+      <br>
+      <button id="buscarBtn">BUSCAR</button>
+  </div>
+
+  </div>
+<hr>
 
     <main class="text-dark">
       <section>
@@ -111,63 +135,72 @@
         >
           <figure>
             <img src="../img/Productos/1.webp" alt="Taza" />
-            <figcaption>Taza + Plato</figcaption>
+            <figcaption id="n1">Taza + Plato</figcaption>
             <p>Fabricados con ceramica multicolor</p>
-            <button class="btn-animado">+ agregar al carrito</button>
+            <p id="p1">$1000</p>
+            <button id="b1" class="btn-animado">+ agregar al carrito</button>
           </figure>
 
           <figure>
             <img src="../img/Productos/2.webp" alt="Tarrito" />
-            <figcaption>Panera</figcaption>
+            <figcaption id="n2">Panera</figcaption>
             <p>Gran capacidad y dureza</p>
-            <button class="btn-animado">+ agregar al carrito</button>
+            <p id="p2">$1500</p>
+            <button id="b2" class="btn-animado">+ agregar al carrito</button>
           </figure>
 
           <figure>
             <img src="../img/Productos/3.webp" alt="Tarrito2" />
-            <figcaption>Compotera</figcaption>
+            <figcaption id="n3">Compotera</figcaption>
             <p>Polifuncional, tinturas multicolor</p>
-            <button class="btn-animado">+ agregar al carrito</button>
+            <p id="p3">$1350</p>
+            <button id="b3" class="btn-animado">+ agregar al carrito</button>
           </figure>
 
           <figure>
             <img src="../img/Productos/4.webp" alt="Tazas" />
-            <figcaption>Juego de Tazas</figcaption>
+            <figcaption id="n4">Juego de Tazas</figcaption>
             <p>6 Tazas multicolor</p>
-            <button class="btn-animado">+ agregar al carrito</button>
+            <p id="p4">$2500</p>
+            <button id="b4" class="btn-animado">+ agregar al carrito</button>
           </figure>
 
           <figure>
             <img src="../img/Productos/5.webp" alt="Macetita" />
-            <figcaption>Combo Taza y recipiente</figcaption>
+            <figcaption id="n5">Combo Taza y recipiente</figcaption>
             <p>Taza + azucarera</p>
-            <button class="btn-animado">+ agregar al carrito</button>
+            <p id="p5">$1000</p>
+            <button id="b5" class="btn-animado">+ agregar al carrito</button>
           </figure>
 
           <figure>
             <img src="../img/Productos/6.webp" alt="Plato" />
-            <figcaption>Compotera alta</figcaption>
+            <figcaption id="n6">Compotera alta</figcaption>
             <p>Compotera para altas temperaturas</p>
-            <button class="btn-animado">+ agregar al carrito</button>
+            <p id="p6">$3000</p>
+            <button id="b6" class="btn-animado">+ agregar al carrito</button>
           </figure>
 
           <figure>
             <img src="../img/Productos/7.webp" alt="Taza2" />
-            <figcaption>Taza + Plato Color Ocre</figcaption>
+            <figcaption id="n7">Taza + Plato Color Ocre</figcaption>
             <p>Ideal para desayunos</p>
-            <button class="btn-animado">+ agregar al carrito</button>
+            <p id="p7">$2000</p>
+            <button id="b7" class="btn-animado">+ agregar al carrito</button>
           </figure>
           <figure>
             <img src="../img/Productos/8.webp" alt="Tazas" />
-            <figcaption>Juego de Tazas + Plato</figcaption>
+            <figcaption id="n8">Juego de Tazas + Plato</figcaption>
             <p>Juego de Tazas + Plato multicolores</p>
-            <button class="btn-animado">+ agregar al carrito</button>
+            <p id="p8">$1700</p>
+            <button id="b8" class="btn-animado">+ agregar al carrito</button>
           </figure>
           <figure>
             <img src="../img/Productos/9.webp" alt="Tazon" />
-            <figcaption>Tazon Sopero</figcaption>
+            <figcaption id="n9">Tazon Sopero</figcaption>
             <p>Tazon Sopero de gran capacidad</p>
-            <button class="btn-animado">+ agregar al carrito</button>
+            <p id="p9">$1900</p>
+            <button id= "b9" class="btn-animado">+ agregar al carrito</button>
           </figure>
         </div>
       </section>
@@ -254,8 +287,7 @@
     ></script>
     <!-- js de wow.js -->
     <script src="../js/wow.min.js"></script>
-    <!-- js propio -->
-    <script src="../js/main.js"></script>
+   
     <script>
       new WOW().init();
     </script>
