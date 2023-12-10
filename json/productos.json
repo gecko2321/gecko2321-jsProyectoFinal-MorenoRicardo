@@ -1,74 +1,74 @@
 [
 {
 "id": 1,
-"scr": "../img/Productos/1.webp",
+"src": "../img/Productos/1.webp",
 "alt": "Taza",
 "figcaption" : "Taza + Plato",
-"p": "Fabricados con ceramica multicolor",
-"precio": "1000"
+"div": "Fabricados con ceramica multicolor",
+"p": "$1250"
 },
 {
 "id": 2,
-"scr": "../img/Productos/2.webp",
+"src": "../img/Productos/2.webp",
 "alt": "Tarrito",
 "figcaption" : "Panera",
-"p": "Gran capacidad y dureza",
-"precio": "1500"
+"div": "Gran capacidad y dureza",
+"p": "$1500"
 },
 {
 "id": 3,
-"scr": "../img/Productos/3.webp",
+"src": "../img/Productos/3.webp",
 "alt": "Tarrito2",
 "figcaption" : "Compotera",
-"p": "Polifuncional, tinturas multicolor",
-"precio": "1350"
+"div": "Polifuncional, tinturas multicolor",
+"p": "$1350"
 },
 {
 "id": 4,
-"scr": "../img/Productos/4.webp",
+"src": "../img/Productos/4.webp",
 "alt": "Tazas",
 "figcaption" : "Juego de Tazas",
-"p": "6 Tazas multicolor",
-"precio": "2500"
+"div": "6 Tazas multicolor",
+"p": "$2500"
 },
 {
 "id": 5,
-"scr": "../img/Productos/5.webp",
+"src": "../img/Productos/5.webp",
 "alt": "Combo taza",
 "figcaption" : "Combo Taza y recipiente",
-"p": "Taza + azucarera",
-"precio": "1000"
+"div": "Taza + azucarera",
+"p": "$1000"
 },
 {
 "id": 6,
-"scr": "../img/Productos/6.webp",
+"src": "../img/Productos/6.webp",
 "alt": "Plato",
 "figcaption" : "Compotera alta",
-"p": "Compotera para altas temperaturas",
-"precio": "3000"
+"div": "Compotera para altas temperaturas",
+"p": "$3000"
 },
 {
 "id": 7,
-"scr": "../img/Productos/7.webp",
+"src": "../img/Productos/7.webp",
 "alt": "Taza2",
 "figcaption" : "Taza + Plato Color Ocre",
-"p": "Ideal para desayunos",
-"precio": "2000"
+"div": "Ideal para desayunos",
+"p": "$2000"
 },
 {
 "id": 8,
-"scr": "../img/Productos/8.webp",
+"src": "../img/Productos/8.webp",
 "alt": "Taza",
 "figcaption" : "Juego de Tazas + Plato",
-"p": "Juego de Tazas + Plato multicolores",
-"precio": "1700"
+"div": "Juego de Tazas + Plato multicolores",
+"p": "$1700"
 },
 {
 "id": 9,
-"scr": "../img/Productos/9.webp",
+"src": "../img/Productos/9.webp",
 "alt": "Tazon Sopero",
 "figcaption" : "Tazon Sopero",
-"p": "Tazon Sopero de gran capacidad",
-"precio": "1900"
+"div": "Tazon Sopero de gran capacidad",
+"p": "$1900"
 }			
 ]
