@@ -1,3 +1,6 @@
+let busqueda = document.querySelector(".buscar");
+busqueda.style.visibility = "hidden"; //oculto el cuadro de busqueda
+
 //Cargo el archivo JSON con los productos para mostrar en la pagina de productos
 fetch("../json/productos.json")
   .then((response) => {
@@ -39,13 +42,10 @@ fetch("../json/productos.json")
   });
 
 let loginBtn = document.getElementById("loginPrd");
-//let buscarBtn = document.getElementById("buscarBtn");
 let txtUsu = document.getElementById("txtUsu");
 let txtPass = document.getElementById("txtPass");
-//solicito Nombre de producto y precio
 let nombre = document.getElementById("txtProd");
-//let precio = document.getElementById("txtPrecio").value;
-
+let ingreso = document.querySelector(".ingreso");
 
 //variable para conteo de logins
 let i = 3;
@@ -67,6 +67,7 @@ function login() {
     txtUsu.value = ""; //borro valor de input
     txtPass.value = ""; //borro valor de input
     busqueda.style.visibility = "visible"; //muestro el cuadro de busqueda si el logueo es correcto
+    ingreso.style.visibility = "hidden"; //Oculto el div de Ingreso cuando se produce el ingreso correcto
   } else {
     i = i - 1;
     Swal.fire({
@@ -106,20 +107,27 @@ document.getElementById("buscarBtn").addEventListener("click", function () {
     });
 });
 
-
-document.querySelectorAll('.btn-animado').forEach(btn => {
-  btn.addEventListener('click', function() {
+document.querySelectorAll(".btn-animado").forEach((btn) => {
+  btn.addEventListener("click", function () {
     const figure = this.parentElement; // Obtiene el contenedor <figure> del botón clickeado
-    const figcaption = figure.querySelector('figcaption').textContent; // Obtiene el texto de la <figcaption>
-    const pText = figure.querySelector('p').textContent; // Obtiene el texto del <p>
-    const pTextt = pText.replace("$","")
+    const figcaption = figure.querySelector("figcaption").textContent; // Obtiene el texto de la <figcaption>
+    const pText = figure.querySelector("p").textContent; // Obtiene el texto del <p>
+    const pTextt = pText.replace("$", "");
 
     // Guarda en localStorage
-    
-    localStorage.setItem('textoFigcaption', figcaption);
-    localStorage.setItem('textoP', pTextt);
-    let suma = 0 + parseFloat(pText)
-    localStorage.setItem('total', suma);
 
+    localStorage.setItem("Producto", figcaption);
+    localStorage.setItem("Precio", pTextt);
+    // Recupera el valor actual de la clave 'valor' del localStorage
+    let total = localStorage.getItem("Total");
+
+    // Convierte el valor actual a un número (si existe)
+    total = total ? parseFloat(total) : 0;
+
+    // Suma el nuevo valor al valor actual
+    let suma = total + parseFloat(pTextt);
+
+    //let suma = 0 + parseFloat(pTextt)
+    localStorage.setItem("Total", suma);
   });
 });
